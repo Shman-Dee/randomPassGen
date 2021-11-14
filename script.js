@@ -110,14 +110,12 @@ function generatePassword() {
     let addNumbers = confirm("Would you like numbers in your password?");
     if (addNumbers) {
       userInputs = userInputs.concat(numbers);
-      console.log(userInputs);
     }
     let addUppercase = confirm(
       "Would you like to add uppercase to your password?"
     );
     if (addUppercase) {
       userInputs = userInputs.concat(upper);
-      console.log(userInputs);
     }
 
     let addLowercase = confirm(
@@ -125,14 +123,12 @@ function generatePassword() {
     );
     if (addLowercase) {
       userInputs = userInputs.concat(lowercases);
-      console.log(userInputs);
     }
     let addSpecialCharacters = confirm(
       "Would you like to add special characters to your password?"
     );
     if (addSpecialCharacters) {
       userInputs = userInputs.concat(characters);
-      console.log(userInputs);
     }
   }
 }
