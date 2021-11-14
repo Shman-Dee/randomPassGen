@@ -129,7 +129,25 @@ function generatePassword() {
     );
     if (addSpecialCharacters) {
       userInputs = userInputs.concat(characters);
+      // all ok's are gathered in a new array
     }
+    if (
+      !addNumbers &&
+      !addLowercase &&
+      !addSpecialCharacters &&
+      !addUppercase
+    ) {
+      alert("No password generated");
+    }
+
+    let result = "";
+
+    for (let i = 0; i < passwordLength; i++) {
+      result =
+        result + userInputs[Math.floor(Math.random() * userInputs.length)];
+      console.log(result);
+    }
+    return result;
   }
 }
 
